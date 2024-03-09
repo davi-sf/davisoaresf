@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #081b29;
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #434343;
+
+    font-size: 16px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 9%;
+    background-color: #080d11;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: #2a709e;
+    border-bottom: 3px solid #2a709e;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: #2a709e;
+    display: none;
+}
+
+main.portfolio {
+    display: flex;
+    padding: 32px;
+}
+
+main.portfolio section.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #080d11;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    max-height: 468px;
+    margin: 0 16px 32px 16px;
+    overflow: auto;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+}
+
+main.portfolio section.portfolio-card .icon {
+    width: 64px;
+    height: 64px;
+    color: white;
+}
+
+main.portfolio section.portfolio-card img {
+    width: 100%;
+}
+
+main.portfolio section.portfolio-card h3 {
+    font-size: 1.6rem;
+    margin: 16px 0;
+    color: white;
+}
+
+main.portfolio section.portfolio-card p {
+    font-weight: 300;
+    max-width: auto;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+main.portfolio section.portfolio-card a {
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer; 
+}
+
+
+
+@media screen and (max-width: 720px) {
+    main.portfolio {
+        flex-direction: column;
+    }
+
+    main.portfolio section.portfolio-card {
+        margin-bottom: 32px;
+        max-width: none;
+    }
+}
+
+@media (max-width: 1285px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 895px) {
+    #menu-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 895px) {
+    body {
+        padding-top: 8rem;
+    }
+}
+
+@media (max-width: 895px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background-color: rgba(8, 13, 17, 0.8);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+        text-align: center;
+    }
+}

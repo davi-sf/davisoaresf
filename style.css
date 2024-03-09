@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kode Mono", monospace;;
+
+}
+
+:root{
+    --main-color: #2a709e;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #081b29
+  }
+
+
+
+.logo {
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    text-decoration: none; 
+
+}
+.logo :hover{
+    transform: scale(1.1);
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 9%;
+    background-color: #080d11;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 2rem; 
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    text-decoration: none; 
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    padding: 4rem;
+}
+
+
+.social-icons {
+    margin-top: 20px; 
+}
+
+.social-icons a {
+    color: white; 
+    font-size: 24px;
+    margin-right: 10px; 
+    text-decoration: none; 
+}
+
+.social-icons a:hover {
+    color: #b9b9b9; 
+}
+
+.about-img {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 2rem; 
+}
+
+.about-img img {
+    width: 300px; 
+    height: auto; 
+}
+
+.heading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-content {
+
+    max-width: 600px; 
+}
+.about-content p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 2rem; 
+}
+
+.paginaprincipal {
+    width: 450px;
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 12%; 
+    color: white;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+.paginaprincipal .box-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.paginaprincipal h1 {
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: 100;
+    margin-bottom: 10px; 
+}
+
+.paginaprincipal h5 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    margin-bottom: 10px; 
+}
+
+.paginaprincipal p {
+    margin-bottom: 20px; 
+}
+
+.paginaprincipal ul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px; 
+}
+
+.paginaprincipal li {
+    display: inline-block;
+    margin: 6px;
+    list-style: none;
+}
+
+.paginaprincipal li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all ease-in-out 250ms;
+}
+
+.paginaprincipal li a:hover {
+    color: #b9b9b9;
+}
+
+
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 2rem; 
+    }
+
+    .social-icons {
+        margin-top: 10px; 
+    }
+
+    .about-img {
+        margin-left: 0; 
+        margin-bottom: 1rem; 
+    }
+
+    .about-img img {
+        width: 200px; 
+    }
+
+    .heading {
+        font-size: 2rem; 
+        text-align: center; 
+        margin-bottom: 1rem; 
+    }
+
+    .about-content {
+        max-width: 100%; 
+        text-align: center; 
+    }
+
+    .about-content p {
+        font-size: 1.4rem; 
+        line-height: 1.4; 
+        margin-bottom: 1rem; 
+}
+
+
+@media (max-width: 1285px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+@media (max-width: 991px) {
+    header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3%;
+    }
+}
+
+@media (max-width: 895px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%; 
+        padding: 1rem 3%;
+        background-color: rgba(8, 13, 17, 0.8);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none; 
+    }
+
+    .navbar.active {
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+        text-align: center; 
+    }
+
+    .paginaprincipal {
+        padding: 2rem; 
+        margin-top: 20vh; 
+    }
+}
+}
