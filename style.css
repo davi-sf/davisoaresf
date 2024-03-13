@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Kode Mono", monospace;;
-
 }
 
 :root{
@@ -130,7 +129,7 @@ body{
     margin-bottom: 2rem; 
 }
 
-.paginaprincipal {
+.homepage {
     width: 450px;
     padding: 40px;
     text-align: center;
@@ -140,51 +139,80 @@ body{
     font-family: 'Century Gothic', sans-serif;
 }
 
-.paginaprincipal .box-img {
+.homepage .box-img {
     border-radius: 50%;
     width: 200px;
     height: 200px;
 }
 
-.paginaprincipal h1 {
+.homepage h1 {
     font-size: 40px;
     letter-spacing: 4px;
     font-weight: 100;
     margin-bottom: 10px; 
 }
 
-.paginaprincipal h5 {
+.homepage h5 {
     font-size: 20px;
     letter-spacing: 3px;
     font-weight: 100;
     margin-bottom: 10px; 
 }
 
-.paginaprincipal p {
+.homepage p {
     margin-bottom: 20px; 
 }
 
-.paginaprincipal ul {
+.homepage ul {
     margin: 0;
     padding: 0;
     margin-bottom: 20px; 
 }
 
-.paginaprincipal li {
+.homepage li {
     display: inline-block;
     margin: 6px;
     list-style: none;
 }
 
-.paginaprincipal li a {
+.homepage li a {
     color: white;
     text-decoration: none;
     font-size: 20px;
     transition: all ease-in-out 250ms;
 }
 
-.paginaprincipal li a:hover {
+.homepage li a:hover {
     color: #b9b9b9;
+}
+
+.langs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: large;
+    font-family: "Kode Mono", monospace;;
+}
+
+.langs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.langs a {
+    margin: 0 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+    background-color:white;
+    border-radius: 5px;
+}
+
+.langs a.active {
+    background-color: #080d11;
+    ;
+    color: #fff;
 }
 
 
@@ -224,8 +252,8 @@ body{
         font-size: 1.4rem; 
         line-height: 1.4; 
         margin-bottom: 1rem; 
+    }
 }
-
 
 @media (max-width: 1285px) {
     html {
@@ -275,9 +303,8 @@ body{
         text-align: center; 
     }
 
-    .paginaprincipal {
+    .homepage {
         padding: 2rem; 
         margin-top: 20vh; 
     }
-}
 }
